@@ -1,0 +1,87 @@
+Regular Expressions
+
+^ -> Carrot
+Used to filter the text that starts with something in a line.
+
+Ex: grep "^pass" /etc/passwd
+
+
+
+$ -> Dollar
+Used to filter the lines ends with something.
+
+Ex: grep "sam$" names.txt
+
+
+
+. -> Period
+Used to match single character.
+
+Ex: egrep "c.t" pets.txt
+
+
+
+* -> Asterisk
+Used to match 0 or more previous elements.
+
+Ex: grep "sam*" names.txt
+
+
+
++ -> plus
+Used to match 1 or more characters
+
+Ex: egrep "1+" in numbers.txt
+
+
+
+? -> Question mark 
+Make the previous element optional
+
+Ex: egrep "disabled?" text.txt
+d is optional in disabled.
+
+
+
+| -> Vertical pipe
+Match one thing or the other.
+
+Ex: egrep "enabled|disabled" text.txt
+
+
+
+[] -> Range or sets
+Can match [a-z], [0-9], and sets [abc123]
+
+Ex: egrep 'c[au]t' text.txt
+It matches cat or cut.
+
+Ex: egrep -r '/dev/(([a-z]|[A-Z])*[1-9]?)*' /etc/
+It matches all disks
+
+
+
+[^] -> Negated ranges
+It used used to exclude the elements.
+
+Ex: egrep 'http[^s]' urls.txt
+Exclude https urls and show only http urls.
+
+
+
+-> Match at least 3 zeros
+Ex: egrep '0{3,}' numbers.txt
+
+
+
+-> Match at least 1 and max of 3 zeros
+Ex: egrep '0{,3}' numbers.txt
+
+
+
+-> Match exactly 3 zeros.
+Ex: egrep '0{3}' numbers.txt
+
+
+
+
