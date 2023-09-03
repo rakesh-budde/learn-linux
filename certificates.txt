@@ -1,0 +1,10 @@
+
+-> Generate a new key and certificate signing request with openssl
+openssl req -newkey rsa:2048 -keyout key.pem -out req.pem
+
+
+
+-> Generate a x509 certificate
+-> Do not ask for password to encrypt a key (Not recommended)
+-> Certificate is valid for 365 days
+openssl req -x509 -noenc -newkey rsa:4096 -days 365 -keyout myprivatekey.pem -out mycertificate.pem
