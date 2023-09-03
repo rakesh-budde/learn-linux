@@ -1,0 +1,17 @@
+SUID: Set user ID
+
+A file with SUID always executes as the user who owns the file, regardless of the user passing the command.
+
+Command: chmod 4666 <filename> or chmod u+s <directory>
+
+
+SGID: Set group ID
+If set on a file, it allows the file to be executed as the group that owns the file (similar to SUID)
+If set on a directory, any files created in the directory will have their group ownership set to that of the directory owner
+
+Command: chmod 2666 <filename> or chmod g+s <directory>
+
+Sticky Bit:
+This permission does not affect individual files. However, at the directory level, it restricts file deletion. Only the owner (and root) of a file can remove the file within that directory. A common example of this is the /tmp directory
+
+Command: chmod 1666 <directory> or chmod +t <directory>
