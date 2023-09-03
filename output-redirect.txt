@@ -1,0 +1,34 @@
+1) Redirect stdout
+Sh script.sh > output.txt
+Or
+Sh script.sh 1> output.txt
+
+
+
+2) Redirect stderr
+Sh script.sh 2> output.txt
+
+
+
+3) Redirect both stdout and stderr
+
+Sh script.sh 1> output.txt 2> err.txt
+Or
+Sh script.sh 1> output.txt 2>&1
+
+4) Redirect input
+Sendmain mail@example.com < emailcontent.txt
+
+5) Heredoc
+sort <<EOF
+3
+4
+2
+5
+5
+1
+> EOF
+
+6) Herestring
+Bc <<< 1+2+3+4
+
