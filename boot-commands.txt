@@ -1,0 +1,30 @@
+-> reboot a server
+systemctl reboot
+
+-> shutdown a server
+systemctl poweroff
+
+-> Reboot in abnormal situations(Not recommended)
+Systemctl reboot --force
+
+-> Shutdown at 2:00 AM
+Systemctl shutdown 02:00
+
+-> Shutdown after 15 minutes
+Systemctl shutdown +15
+
+-> Reboot at 2:00 AM
+Systemctl shutdown -r 02:00
+
+-> Send a war msg before reboot.
+shutdown -r +1 'Scheduled restart to do an offline-backup of our database'
+
+-> get default boot
+Systemctl get-default
+
+-> Set default boot
+Systemctl set-default multi-user.target
+
+-> Switch to the graphical target
+Systemctl isolate graphical.target
+
