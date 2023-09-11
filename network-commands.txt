@@ -1,0 +1,11 @@
+# Show Network interfaces
+ip link show
+
+
+# Show IP address
+ip address show
+
+
+# Show IP route
+ip route show
+

@@ -1,0 +1,51 @@
+# View a system service file
+Systemctl cat sshd.service
+
+# Edit a system service file
+Systemctl edit --full sshd.service
+
+# Status of a system service
+Systemctl status sshd.service
+
+# Stop of a system service
+Systemctl stop sshd.service
+
+# Start a system service
+Systemctl start sshd.service
+
+# Restart a system service
+Systemctl restart sshd.service
+
+# Gracefully reload a system service
+Systemctl reload sshd.service
+
+# Try reload if it doesn't work then restart a system service
+Systemctl reload-or-restart sshd.service
+
+# Disable a system service to do not start at boot time.
+Systemctl disable sshd.service
+
+# Enable a system service to start at boot time.
+Systemctl enable sshd.service
+
+
+# Is system service enabled
+systemctl is-enabled sshd.service
+
+
+# Enable and start the service
+Systemctl enable --now sshd.service
+
+# Force the system to do not start any service by masking them.
+Systemctl mask atd.service
+
+# Unmask the service
+Systemctl unmask atd.service
+
+# List all system services
+Systemctl list-units --type service --all
+
+
+
+
+
